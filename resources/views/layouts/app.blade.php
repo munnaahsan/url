@@ -18,6 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    {{-- Falcon Style Sheet For Login Page --}}
+    <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
+
+    
 </head>
 <body>
     <div id="app">

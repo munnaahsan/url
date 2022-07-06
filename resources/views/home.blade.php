@@ -344,10 +344,10 @@
                     <div class="settings px-3 px-xl-0">
                         <div class="navbar-vertical-divider px-0">
                             <hr class="navbar-vertical-hr my-3" />
-                        </div><a class="btn btn-sm btn-block btn-purchase mb-3" href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/">
+                        </div><a class="btn btn-sm btn-block btn-purchase mb-3">
                             Purchase</a>
                     </div>
-                </div>
+                </div
             </div>
         </nav>
         <div class="content">
@@ -626,12 +626,18 @@
                             <h5 class="mb-0">Short your URL</h5>
                         </div>
                         <div class="card-body bg-light">
-                            <form>
+                            <form action="{{route('short.url')}}" method="post">
+                                @csrf
                                 <div class="form-row">
                                     <div class="col-9">
                                         <div class="form-group">
                                             <label for="event-name">Put Link</label>
-                                            <input class="form-control" id="event-name" type="text" placeholder="Paste A Long Link">
+                                            <input
+                                                class="form-control"
+                                                type="text"
+                                                name="original_url"
+                                                id="original_url"
+                                                placeholder="Paste A Long Link">
                                         </div>
                                     </div>
                                     <div class="col-3 mt-4 pull-left">
@@ -639,11 +645,8 @@
                                             <button type="submit" class="btn btn-primary">Shorten
                                             </button>
                                         </div>
-
                                     </div>
                                 </div>
-
-                                <?php echo url()->previous();?>
                             </form>
                         </div>
                     </div>
@@ -809,7 +812,7 @@
                         <hr />
                         <div class="text-center mt-5"><img class="mb-4" src="assets/img/illustrations/settings.png" alt="" width="120" />
                             <h5>Like What You See?</h5>
-                            <p class="fs--1">Get Falcon now and create beautiful dashboards with hundreds of widgets.</p><a class="btn btn-primary" href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/">Purchase</a>
+                            <p class="fs--1">Get Falcon now and create beautiful dashboards with hundreds of widgets.</p><a class="btn btn-primary" href="">Purchase</a>
                         </div>
                     </div>
                 </div>

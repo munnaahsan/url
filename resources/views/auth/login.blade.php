@@ -10,7 +10,7 @@
               <div class="row no-gutters h-100">
                 <div class="col-md-5 text-white text-center bg-card-gradient">
                   <div class="position-relative p-4 pt-md-5 pb-md-7">
-                    <div class="bg-holder bg-auth-card-shape" 
+                    <div class="bg-holder bg-auth-card-shape"
                          style="background-image:url(../../assets/img/illustrations/half-circle.png);">
                     </div>
                     <!--/.bg-holder-->
@@ -35,14 +35,14 @@
 
 
 
-                        <input 
-                            id="email" 
-                            type="email" 
-                            class="form-control @error('email') is-invalid @enderror" 
-                            name="email" 
-                            value="{{ old('email') }}" 
-                            required 
-                            autocomplete="email" 
+                        <input
+                            id="email"
+                            type="email"
+                            class="form-control @error('email') is-invalid @enderror"
+                            name="email"
+                            value="{{ old('email') }}"
+                            required
+                            autocomplete="email"
                             autofocus>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -57,12 +57,12 @@
                           {{-- <a class="fs--1" href="../../authentication/card/forgot-password.html">Forgot Password?</a> --}}
                         </div>
                         {{-- <input class="form-control" id="card-password" type="password" /> --}}
-                        <input 
-                            id="password" 
-                            type="password" 
-                            class="form-control @error('password') is-invalid @enderror" 
-                            name="password" 
-                            required 
+                        <input
+                            id="password"
+                            type="password"
+                            class="form-control @error('password') is-invalid @enderror"
+                            name="password"
+                            required
                             autocomplete="current-password">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

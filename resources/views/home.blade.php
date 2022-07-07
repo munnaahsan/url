@@ -570,7 +570,10 @@
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="pages/settings.html">Settings</a>
-                                <a class="dropdown-item" href="authentication/basic/logout.html">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
                             </div>
                         </div>
                     </li>
@@ -612,13 +615,7 @@
                 <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../assets/img/illustrations/corner-4.png);">
                 </div>
                 <!--/.bg-holder-->
-
-
             </div>
-
-
-
-
             <div class="row no-gutters">
                 <div class="col-lg-8 pr-lg-2">
                     <div class="card mb-3">

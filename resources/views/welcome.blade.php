@@ -133,15 +133,32 @@
                     <div class="lead text-white opacity-8">
                         Demo for the SMS plugin for Premium URL Shortener! You can send SMS directly from here and shorten links within the sms. </div>
                     <!-- <form class="mt-5" method="post" action="https://demo.gempixel.com/smsplugin/shorten" data-trigger="shorten-form"> -->
-                    <form class="mt-5" method="post" action="" data-trigger="shorten-form">
+                    <form class="mt-5" method="post"  action="{{route('short_dashboard')}}" data-trigger="shorten-form">
+                        @csrf
                         <div class="input-group input-group-lg mb-3">
-                            <input type="text" class="form-control" placeholder="Paste a long url" name="url" id="url">
+                            <input
+                                class="form-control"
+                                type="text"
+                                name="original_url"
+                                id="original_url"
+                                placeholder="Paste A Long Link">
+
                             <div class="input-group-append">
                                 <button class="btn btn-warning d-none" type="button">Copy</button>
-                                <button class="btn btn-success" type="submit">Shorten</button>
+                                <button type="submit" class="btn btn-primary">Shorten</button>
+{{--                                <button class="btn btn-success" type="submit">Shorten</button>--}}
                             </div>
                         </div>
-                        <a href="#advanced" data-toggle="collapse" class="btn btn-xs btn-primary mb-2">Advanced</a>
+{{--                        <a href="#advanced" data-toggle="collapse" class="btn btn-xs btn-primary mb-2">Advanced</a>--}}
+                        @isset($destination_url)
+                         <a href="{{$destination_url}}" class="text-primary" target="_blank"> Your Short URL : {{$destination_url}}</a>
+                        @endisset
+{{--                        <a href="#advanced" data-toggle="collapse" class="btn btn-xs btn-primary mb-2"></a>--}}
+
+
+
+
+
                         <div class="collapse row" id="advanced">
                             <div class="col-md-6 mt-3">
                                 <div class="form-group">
@@ -763,4 +780,3 @@
             @endif
         </div>
     </body> --}}
- 

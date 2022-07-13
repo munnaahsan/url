@@ -555,8 +555,8 @@
                     </li>
                     <li class="nav-item dropdown dropdown-on-hover"><a class="nav-link pr-0" id="navbarDropdownUser" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="avatar avatar-xl">
-                                <img class="rounded-circle" src="{{asset('img/team/4-thumb.png')}}" alt="User Image" />
-
+{{--                                <img class="rounded-circle" src="{{asset('img/team/4-thumb.png')}}" alt="User Image" />--}}
+                                   <h3 class="text-success"> {{$auth_user_name}}  </h3>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right py-0" aria-labelledby="navbarDropdownUser">
@@ -643,6 +643,17 @@
                                             </button>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label for="event-name">Your Short Link</label>
+                                            @isset($destination_url)
+                                                <a href="{{$destination_url}}">{{$destination_url}}</a>
+                                            @endisset
+                                        </div>
+                                    </div>
+
                                 </div>
                             </form>
                         </div>

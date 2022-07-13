@@ -20,4 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/short_dashboard', [App\Http\Controllers\ShortUrlController::class, 'shortDashboard'])->name('short_dashboard');
 Route::post('/short', [App\Http\Controllers\ShortUrlController::class, 'short'])->name('short.url');
+Route::get('/result', [App\Http\Controllers\ShortUrlController::class, 'result'])->name('result');
